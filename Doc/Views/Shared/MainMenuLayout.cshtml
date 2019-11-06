@@ -1,0 +1,68 @@
+﻿@*@{
+        Layout = null;
+    }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc - @ViewData["Title"]</title>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <link href="~/Style/MainMenuLayout.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-4.0.0/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap-4.0.0/dist/js/bootstrap.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <form asp-controller="MainMenu" method="post">
+        <div class="container-fluid menu_bar fixed-top">
+            <div class="row">
+                <div class="col-1 col-sm-1 col-md-1 menu_bar">
+
+                </div>
+                <div class="col-3 col-sm-3 col-md-2 logo" style="color: white;">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6" style="padding-top: 5px;">
+                            <p style="font: italic bold 30px arial; text-align: right;">D</p>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6" style="padding-top: 15px;">
+                            <p style="font: italic bold 30px arial; text-align: left;">T</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-sm-8 col-md-9 menu_bar">
+                    <div class="row">
+                        <div class="col-4 col-sm-2 col-md-6" style="height: 100%">
+
+                        </div>
+                        <div class="col-sm-3 col-md-2 menuIcon home_menu">
+                            <input class="menuButton" style="border: none; border-radius: unset;" id="btnHome" type="submit" value="Home" asp-action="menuHome" />
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-2 menuIcon search_menu">
+                            <input class="menuButton" style="border: none; border-radius: unset;" id="btnSearch" type="submit" value="Search" asp-action="menuSearch" />
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-2 menuIcon">
+                            <input class="menuButton" id="btnLogin" type="submit" value="Log In" asp-action="menuLogin" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    @RenderBody()
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <hr />
+
+            <p>&copy; 2019 - Doctor Tech</p>
+        </div>
+    </footer>
+</body>
+</html>
